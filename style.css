@@ -11,13 +11,13 @@ body {
     min-block-size: 100vh;
     font-family: "Open Sans", sans-serif;
     background-color: hsl(188 18% 37% / 0.2);
-      zoom: 0.67;
+/*       zoom: 0.67;
   -moz-transform: scale(0.67);
   -moz-transform-origin: 0 0;
   -o-transform: scale(0.67);
   -o-transform-origin: 0 0;
   -webkit-transform: scale(0.67);
-  -webkit-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0; */
 }
 
 .container {
