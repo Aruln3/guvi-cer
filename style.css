@@ -156,6 +156,18 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     border: 3px solid violet;
 }
 
+.thumbnail__btn {
+    display: inline-flex;
+    width: calc(100% / 5);
+    background: var(--thumbnail);
+    background-position: center;
+    background-size: cover;
+    border: 3px solid violet;
+    float: left; /* Add this property */
+    margin-right: 10px; /* Add this property to create spacing between thumbnails */
+}
+
+
 .thumbnail__btn:nth-of-type(1) {
     --thumbnail: url(https://i.postimg.cc/byHWknXR/image.png);
 }
