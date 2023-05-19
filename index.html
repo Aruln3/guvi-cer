@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html>
- <link rel="stylesheet" href="style.css">
-<head>
- <script src="script.js"></script>
- <title> Arul certificats </title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Arul certificats</title>
+  </head>
+  <body>
 <div class="container">
     <main class="main">
         <article class="article article__01" role="tabpanel" aria-labelledby="1">
@@ -165,29 +165,30 @@
         </nav>
     </aside>
     <script>
-    const buttons = document.querySelectorAll('[role="tab"]');
-    const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+      const buttons = document.querySelectorAll('[role="tab"]');
+      const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
 
-    function toggleAttribute(elements, attribute, value) {
+      function toggleAttribute(elements, attribute, value) {
         elements.forEach((element) => {
-            element.setAttribute(attribute, value);
+          element.setAttribute(attribute, value);
         });
-    }
+      }
 
-    function showTabContent(e) {
+      function showTabContent(e) {
         const id = this.id;
 
         toggleAttribute(tabPanels, "hidden", true);
         toggleAttribute(buttons, "aria-selected", false);
         toggleAttribute([this], "aria-selected", true);
         const tabPanel = tabPanels.find(
-            (panel) => panel.getAttribute("aria-labelledby") === id
+          (panel) => panel.getAttribute("aria-labelledby") === id
         );
         tabPanel.hidden = false;
-    }
+      }
 
-    buttons.forEach((button) => {
+      buttons.forEach((button) => {
         button.addEventListener("click", showTabContent);
-    });
-</script>
-    </body>
+      });
+    </script>
+  </body>
+</html>
