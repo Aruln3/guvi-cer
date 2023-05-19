@@ -1,3 +1,4 @@
+*,
 *::before,
 *::after {
     margin: 0;
@@ -7,10 +8,16 @@
 
 body {
     display: flex;
-    min-height: 100vh;
+    min-block-size: 100vh;
     font-family: "Open Sans", sans-serif;
     background-color: hsl(188 18% 37% / 0.2);
-    margin: 0;
+/*       zoom: 0.67;
+  -moz-transform: scale(0.67);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.67);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.67);
+  -webkit-transform-origin: 0 0; */
 }
 
 .container {
@@ -20,8 +27,8 @@ body {
     mix-blend-mode: difference;
     position: relative;
     min-height: 42.75em;
-    margin-top: 20px;
-    margin-bottom: 340px;
+  margin-top:20px;
+  margin-bottom:340px;
     box-shadow: 0px 4.6px 3.8px -10px rgba(0, 0, 0, 0.114),
         0px 9.3px 8.9px -10px rgba(0, 0, 0, 0.16),
         0px 16.3px 17.3px -10px rgba(0, 0, 0, 0.202),
@@ -62,9 +69,10 @@ figure {
     grid-row: 1 / -1;
 }
 
-figcaption {
-    padding-left: 24px;
+figcaption{
+  padding-left:24px;
 }
+
 
 .image {
     display: block;
@@ -76,28 +84,23 @@ figcaption {
 }
 
 .text__content {
-    background: rgba(243, 255, 228, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba( 243, 255, 228, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10.5px );
+-webkit-backdrop-filter: blur( 10.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: grid;
     gap: 1rem;
-    max-width: 100%;
     width: 24ch;
     position: absolute;
     top: 0;
-    margin-top: 220px;
+    margin-top:220px;
     padding-block: 3rem 1rem;
-    margin-inline: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
+    margin-inline: 1rem;
 }
-
-.text__content:hover {
-    transform: rotate(-10deg);
+.text__content:hover{
+  transform:rotate(-10deg);
 }
 
 .title {
@@ -125,11 +128,9 @@ figcaption {
     border-radius: 10vh;
     padding: 0.5em 1.25em;
 }
-
-.cta-btn:hover {
-    background-color: green;
+.cta-btn:hover{
+  background-color: green;
 }
-
 .aside {
     position: fixed;
     bottom: 0;
@@ -153,50 +154,50 @@ figcaption {
     background-position: center;
     background-size: cover;
     border: 3px solid violet;
-    float: left;
-    margin-right: 10px;
 }
+
+.thumbnail__btn {
+    display: inline-flex;
+    width: calc(100% / 5);
+    background: var(--thumbnail);
+    background-position: center;
+    background-size: cover;
+    border: 3px solid violet;
+    float: left; /* Add this property */
+    margin-right: 10px; /* Add this property to create spacing between thumbnails */
+}
+
 
 .thumbnail__btn:nth-of-type(1) {
     --thumbnail: url(https://i.postimg.cc/byHWknXR/image.png);
 }
-
 .thumbnail__btn:nth-of-type(2) {
     --thumbnail: url(https://i.postimg.cc/Zbzbc6WB/image.png);
 }
-
 .thumbnail__btn:nth-of-type(3) {
     --thumbnail: url(https://i.postimg.cc/rVvfzCwm/image.png);
 }
-
 .thumbnail__btn:nth-of-type(4) {
     --thumbnail: url(https://i.postimg.cc/rFfbd2rC/image.png);
 }
-
 .thumbnail__btn:nth-of-type(5) {
     --thumbnail: url(https://i.postimg.cc/HdC98Ld6/image.png);
 }
-
 .thumbnail__btn:nth-of-type(6) {
     --thumbnail: url(https://i.postimg.cc/4f0PKvwM/image.png);
 }
-
 .thumbnail__btn:nth-of-type(7) {
     --thumbnail: url(https://i.postimg.cc/nnRXtn2F/image.png);
 }
-
 .thumbnail__btn:nth-of-type(8) {
     --thumbnail: url(https://i.postimg.cc/p2gWCrWS/image.png);
 }
-
 .thumbnail__btn:nth-of-type(9) {
     --thumbnail: url(https://i.postimg.cc/wqFnjxfv/image.png);
 }
-
 .thumbnail__btn:nth-of-type(10) {
     --thumbnail: url(https://i.postimg.cc/fDFybDpB/image.png);
 }
-
 .thumbnail__btn:nth-of-type(11) {
     --thumbnail: url(https://i.postimg.cc/wqFnjxfv/image.png);
 }
@@ -211,6 +212,7 @@ figcaption {
     scale: 0.93;
     box-shadow: 0 0 0 4rem #0007 inset !important;
 }
+
 [aria-selected="true"] {
     transform: translateY(-1rem);
     outline: 2px solid dodgerblue;
